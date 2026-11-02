@@ -1,0 +1,7 @@
+module com.farkle {
+    requires javafx.controls;
+    requires javafx.fxml;
+
+    opens com.farkle to javafx.fxml;
+    //exports com.farkle;
+}
