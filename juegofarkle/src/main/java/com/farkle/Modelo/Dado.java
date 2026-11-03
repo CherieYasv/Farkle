@@ -12,6 +12,7 @@ public class Dado {
         lanzar(); // Asigna un valor aleatorio inicial entre 1 y 6
     }
 
+
     public Dado(int numeroCaras) {
         this.numeroCaras = numeroCaras;
         lanzar();
