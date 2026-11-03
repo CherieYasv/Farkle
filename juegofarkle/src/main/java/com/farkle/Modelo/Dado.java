@@ -6,6 +6,7 @@ public class Dado {
     private int numeroCaras;
     private int valorVisible;
 
+
     public Dado() {
         numeroCaras = 6;
         lanzar(); // Asigna un valor aleatorio inicial entre 1 y 6
