@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public abstract class Jugador {
     private String nombre;
     private int puntos;
-    private boolean enJuego;   // ya anotó sus primeros 500 o más
+    private boolean enJuego;
 
     public Jugador(String nombre) {
         this.nombre = nombre;
