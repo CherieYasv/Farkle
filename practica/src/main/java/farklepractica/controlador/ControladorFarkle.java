@@ -1,6 +1,5 @@
 package farklepractica.controlador;
 
-import farklepractica.modelo.JuegoFarkle;
 import farklepractica.vista.VistaFarkle;
 import javafx.animation.PauseTransition;
 import javafx.util.Duration;

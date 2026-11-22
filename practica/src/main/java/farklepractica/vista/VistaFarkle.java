@@ -2,8 +2,8 @@ package farklepractica.vista;
 
 import java.util.ArrayList;
 
+import farklepractica.controlador.JuegoFarkle;
 import farklepractica.modelo.Dado;
-import farklepractica.modelo.JuegoFarkle;
 import farklepractica.modelo.Jugador;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -152,7 +152,7 @@ public class VistaFarkle {
             Jugador jugador = jugadores.get(i);
             String marca = "   ";
             if (i == juego.getTurnoActual() && juego.isJuegoTerminado() == false) {
-                marca = "---> ";
+                marca = "-> ";
             }
             etiquetasJugadores.get(i).setText(marca + jugador.getNombre() + ": " + jugador.getPuntos());
         }

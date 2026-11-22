@@ -1,6 +1,11 @@
-package farklepractica.modelo;
-
+package farklepractica.controlador;
 import java.util.ArrayList;
+
+import farklepractica.modelo.Dado;
+import farklepractica.modelo.Jugador;
+import farklepractica.modelo.JugadorComputadora;
+import farklepractica.modelo.JugadorHumano;
+import farklepractica.modelo.Puntuacion;
 
 /**
  * Clase que tiene el control del juego. Aquí están TODAS las reglas;
