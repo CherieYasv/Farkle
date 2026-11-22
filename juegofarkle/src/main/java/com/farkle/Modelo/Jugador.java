@@ -2,64 +2,44 @@ package com.farkle.Modelo;
 
 import java.util.ArrayList;
 
-public class Jugador {
-    private int fichas;
+public abstract class Jugador {
     private String nombre;
     private int puntos;
-    private ArrayList<Dado> dados;
+    private boolean enJuego;   // ya anotó sus primeros 500 o más
+
+    public Jugador(String nombre) {
+        this.nombre = nombre;
+        this.puntos = 0;
+        this.enJuego = false;
+    }
 
     public Jugador(){
-        fichas = 20;
-        nombre = "Zanti";
+        nombre = "Victor";
         puntos = 0;
-        dados = new ArrayList<>();
-        for (int i = 0; i < 3; i++){
-            dados.add(new Dado());
-        }
+        enJuego = false;
     }
 
-    public Jugador(String nombre){
-        fichas = 20;
-        this.nombre = nombre;
-        puntos = 0;
-        dados = new ArrayList<>();
-        for (int i = 0; i < 3; i++){
-            dados.add(new Dado());
-        }
+    public void sumarPuntos(int cantidad) {
+        puntos = puntos + cantidad;
+        enJuego = true;
     }
 
-    public void lanzar3Dados(){
-        for (int i = 0; i < 3; i++){
-            dados.get(i).lanzar();
-        }
-    }
+    public abstract boolean esHumano();
 
-    public int getFichas(){
-        return fichas;
-    }
-
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public int getPuntos(){
+    public int getPuntos() {
         return puntos;
     }
 
-    public ArrayList<com.farkle.Modelo.Dado> getDados() {
-        return dados;
+    public boolean estaEnJuego() {
+        return enJuego;
     }
 
-    public String toString(){
-        return "Nombre: " + nombre + "Fichas" + fichas + "Combinacion: " + dados;
+    public String toString (){
+        return "El jugador " + nombre + " tiene la cantidad de puntos: " +  puntos + ", estado de juego: " + enJuego;
     }
-
-    public void incrementaPuntos(int sumar ){
-        puntos += sumar;
-    }
-
-    public void incrementaMonedas (int sumar){
-        fichas += sumar;
-    }
-
 }
+
